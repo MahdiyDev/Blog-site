@@ -1,6 +1,6 @@
 require('dotenv').config()
 const jwt = require('jsonwebtoken')
-const { pg } = require('../../Configs/pg')
+const { pg, pgString } = require('../../Configs/pg')
 
 const Users = async () => {
     const users = await pg(`

@@ -9,7 +9,7 @@ const pool = new Pool({
 })
 
 const poolString = new Pool({
-    connectionString: ''
+    connectionString: 'postgres://ihdmiidd:IjuSszMqHePrT02flXWcE8iYNmS0SSP-@ella.db.elephantsql.com/ihdmiidd'
 })
 
 const pgString = async (SQL, ...values) => {
