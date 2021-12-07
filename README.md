@@ -1,6 +1,6 @@
 # Blog-site
 
-Run server code
+# Run server code
 
 ```
  cd ./server/
@@ -14,10 +14,10 @@ Run server code
  npm run dev
 ```
 
-Run client code
+# Run client code
 
 ```
-cd ./client
+cd ./client/
 ```
 @start command
 ```
