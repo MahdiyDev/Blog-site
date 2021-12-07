@@ -11,7 +11,7 @@ const Users = async () => {
 }
 
 const Signup = async ({ user_fname, user_lname, user_email, user_password }) => {
-    const oldUser = await pg(`select * from users where user_email = $1 and user_password = $2`, user_email, user_password)
+    const oldUser = await pg(`select * from users where user_email = $1`, user_email)
 
     if (!oldUser.length) {
         const signup = await pg(`
