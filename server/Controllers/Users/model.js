@@ -15,8 +15,8 @@ const Signup = async ({ user_fname, user_lname, user_email, user_password }) => 
 
     if (!oldUser.length) {
         const signup = await pg(`
-            insert into users(user_uid, user_fname, user_lname, user_email, user_password)
-            values(uuid_generate_v4(), $1, $2, $3, $4) returning user_uid, user_fname, user_lname, user_email
+            insert into users(user_fname, user_lname, user_email, user_password)
+            values($1, $2, $3, $4) returning user_uid, user_fname, user_lname, user_email, user_date, user_avatar
         `, user_fname, user_lname, user_email, user_password)
 
         const token =  jwt.sign(JSON.stringify(signup), process.env.TOKEN)
@@ -29,7 +29,7 @@ const Signup = async ({ user_fname, user_lname, user_email, user_password }) => 
 
 const Login = async ({ user_email, user_password }) => {
     const oldUser = await pg(`
-        select user_uid, user_avatar, user_fname, user_lname, user_email, user_date from users 
+        select user_uid, user_avatar, user_fname, user_lname, user_email, user_date, user_avatar from users 
         where user_email = $1 and user_password = $2`,
         user_email, user_password)
 

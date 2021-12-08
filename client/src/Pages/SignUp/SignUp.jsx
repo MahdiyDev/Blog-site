@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom"
 import useSignUp from "../../Hooks/useSignUp"
+import './SignUp.scss'
 
 function SignUp() {
     const setUser = useSignUp()
@@ -18,15 +20,24 @@ function SignUp() {
 
     return (
         <>
-            <form
-                onSubmit={signSubmit}
-            >
-                <input type="text" className='input' />
-                <input type="text" className='input' />
-                <input type="email" className='input' />
-                <input type="password" className='input' />
-                <button type="submit">Sign Up</button>
-            </form>
+            <div className="form_wrapper">
+                <form
+                    className='form'
+                    onSubmit={signSubmit}
+                    >
+                    <h2 className='form-title' >Sign Up</h2>
+                    <label htmlFor="FirstName">First Name</label>
+                    <input type="text" className='input' id='FirstName' placeholder='First Name' />
+                    <label htmlFor="LastName">Last Name</label>
+                    <input type="text" className='input' id='LastName' placeholder='Last Name' />
+                    <label htmlFor="Email">Email</label>
+                    <input type="email" className='input' id='Email' placeholder='Email' />
+                    <label htmlFor="Password">Password</label>
+                    <input type="password" className='input' id='Password' placeholder='Password' />
+                    <button type="submit" className='form-btn'>Sign Up</button>
+                    <small>If you have account visit <Link to='/login'> Login </Link> page</small>
+                </form>
+            </div>
         </>
     )
 }

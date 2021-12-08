@@ -1,4 +1,5 @@
 import useLogin from "../../Hooks/useLogin"
+import { Link } from 'react-router-dom'
 
 function Login() {
     const setUser = useLogin()
@@ -17,13 +18,20 @@ function Login() {
 
     return (
         <>
-            <form 
-                onSubmit={handleSubmit}
-            >
-                <input type="email" className='input' />
-                <input type="password" className='input' />
-                <button type="submit">Login</button>
-            </form>
+            <div className="form_wrapper">
+                <form 
+                    className='form'
+                    onSubmit={handleSubmit}
+                >
+                    <h2 className='form-title' >Login</h2>
+                    <label htmlFor="Email">Email</label>
+                    <input type="email" id='Email' className='input' />
+                    <label htmlFor="Password">Password</label>                    
+                    <input type="password" id='Password'  className='input' />
+                    <button type="submit" className='form-btn'>Login</button>
+                    <small>If you don't have account visit <Link to='/signup'> Sign Up </Link> page</small>
+                </form>
+            </div>
         </>
     )
 }

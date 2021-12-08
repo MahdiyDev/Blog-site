@@ -1,0 +1,30 @@
+.profile_background {
+    width: 1260px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background: url('https://picsum.photos/1260/300') no-repeat;
+    background-size: cover;
+}
+.profile {
+    width: 1215px;
+    margin: 0 auto;
+    max-height: auto;
+    padding: 20px 40px;
+    border: 2px solid #999;
+    position: relative;
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 5px solid #fff;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -75px;
+    left: 75px;
+}
+
+.profile_name {
+    margin-top: 85px;
+}

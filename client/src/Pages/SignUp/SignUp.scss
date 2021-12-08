@@ -1,0 +1,42 @@
+.form_wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+}
+
+.form {
+    min-width: 500px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    padding: 20px;
+    border: 2px solid #999;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.form-title {
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #999;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.form-btn {
+    background-color: #fff;
+    border: 2px solid #999;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+}
