@@ -6,7 +6,7 @@ function useUserPost(params) {
     const [ token ] = useAuth(true)
     useEffect(() => {
         if (params) {
-            fetch(`http://localhost:4300/postuser/${params}`, {
+            fetch(`https://blog-site-team.herokuapp.com/postuser/${params}`, {
                 headers: {
                     'authorization': `${token}`
                 }

@@ -4,7 +4,7 @@ function useEditDelete() {
     const [ option, setOption ] = useState(null)
     useEffect(() => {
         if (option !== null) {
-            fetch(`http://localhost:4300/posts`, {
+            fetch(`https://blog-site-team.herokuapp.com/posts`, {
                 method: option.method,
                 headers: {
                     "Content-Type": "application/json",

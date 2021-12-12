@@ -6,7 +6,7 @@ function useAuthUser() {
     const [ token ] = useAuth(true)
 
     useEffect(() => {
-        fetch('http://localhost:4300/auth', {
+        fetch('https://blog-site-team.herokuapp.com/auth', {
             headers: {
                 'authorization': `${token}`
             }

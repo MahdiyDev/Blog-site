@@ -7,7 +7,7 @@ function useSignUp() {
 
     useEffect(() => {
         if (user) {
-            fetch('http://localhost:4300/signup', {
+            fetch('https://blog-site-team.herokuapp.com/signup', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

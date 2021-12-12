@@ -17,7 +17,7 @@ function PostModal({ modal, setModal, method }) {
         <div className="upload-form-wrapper" onClick={e=> e.target.classList.value === 'upload-form-wrapper' ?
             setModal(false) : ''}
             >
-            <form action="http://localhost:4300/posts" method={method} encType="multipart/form-data"
+            <form action="https://blog-site-team.herokuapp.com/posts" method={method} encType="multipart/form-data"
                 className="upload-form">
                 <div className="img_wrapper">
                     <img className="form-sub-img" src={img} alt="" />

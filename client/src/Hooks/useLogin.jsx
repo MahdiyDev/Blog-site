@@ -7,7 +7,7 @@ function useLogin() {
 
     useEffect(() => {
         if (user) {
-            fetch('http://localhost:4300/login', {
+            fetch('https://blog-site-team.herokuapp.com/login', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

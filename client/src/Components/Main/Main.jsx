@@ -16,7 +16,7 @@ function Main({ children }) {
         fetchUser()
     }
     function fetchUser() {
-        fetch(`http://localhost:4300/users?page=${num}&limit=5`, {
+        fetch(`https://blog-site-team.herokuapp.com/users?page=${num}&limit=5`, {
             headers: {
                 'authorization': `${token}`
             }

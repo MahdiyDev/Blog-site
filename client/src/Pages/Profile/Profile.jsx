@@ -81,7 +81,7 @@ function Profile() {
     }
 
     let imgSrc = user.length ? (user[0].user_avatar ? 
-        'http://localhost:4300/avatar/' + user[0].user_avatar 
+        'https://blog-site-team.herokuapp.com/avatar/' + user[0].user_avatar 
     : avatar) :avatar
 
     let styleFile = {
@@ -112,7 +112,7 @@ function Profile() {
                         {modal ? 
                             <div className="upload-form-wrapper" onClick={e => e.target.classList.value === 'upload-form-wrapper' ? setModal(false) : ''}>
                                 <form
-                                    action="http://localhost:4300/avatar"
+                                    action="https://blog-site-team.herokuapp.com/avatar"
                                     method="post"
                                     encType="multipart/form-data"
                                     className="upload-form"
@@ -133,7 +133,7 @@ function Profile() {
                     <ul className='post_list'>
                         {userPost.length ?
                         userPost.map(p => {
-                        let imgSrc = p.user_avatar ? 'http://localhost:4300/avatar/' + p.user_avatar : avatar
+                        let imgSrc = p.user_avatar ? 'https://blog-site-team.herokuapp.com/avatar/' + p.user_avatar : avatar
                         let styleFile = {
                         backgroundImage: `url(${imgSrc})`,
                         backgroundSize: 'cover',
@@ -142,7 +142,7 @@ function Profile() {
                         return (
                         <li className='post_item' key={p.post_uid}>
                             <h3 className='post_title'>{p.post_title}</h3>
-                            <img className='post_img' src={'http://localhost:4300/post/' + p.post_img} alt="img" />
+                            <img className='post_img' src={'https://blog-site-team.herokuapp.com/post/' + p.post_img} alt="img" />
                             <div className="logo-img-post" style={styleFile} />
                             <small className="post-date">{p.post_date}</small>
                             <button className={deleteBtnClick + ' btn'} id={p.post_uid} onClick={deleteBtn}>
@@ -156,7 +156,7 @@ function Profile() {
                                     'upload-form-wrapper' ?
                                     setEditModal(false) : ''}
                                     >
-                                    <form action="http://localhost:4300/updatePost" method='POST'
+                                    <form action="https://blog-site-team.herokuapp.com/updatePost" method='POST'
                                         encType="multipart/form-data" className="upload-form">
                                         <div className="img_wrapper">
                                             <img className="form-sub-img" src={img} alt="" />
