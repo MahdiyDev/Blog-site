@@ -17,26 +17,42 @@
     border: 2px solid #999;
     border-radius: 10px;
     background-color: #fff;
+    color: #555;
+    font-size: 1.8rem;
 }
 
 .form-title {
+    font-size: 3rem;
     text-align: center;
     font-weight: bold;
     margin: 10px 0;
 }
 
+.form-link {
+    font-size: 1.5rem;
+    color: #008dce;
+}
+.form-label {
+    color: #aaa;
+    font-size: 1.3rem;
+}
 .input {
     margin: 10px 0;
     padding: 10px;
-    border: 2px solid #999;
+    border: 2px solid #008dce;
     border-radius: 10px;
     background-color: #fff;
 }
 
 .form-btn {
+    color: #008dce;
     background-color: #fff;
-    border: 2px solid #999;
+    border: 2px solid #008dce;
     border-radius: 10px;
     margin: 10px 0;
     padding: 10px;
+    &:hover {
+        color: #fff;
+        background-color: #008dce;
+    }
 }

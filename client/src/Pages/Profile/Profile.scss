@@ -1,21 +1,29 @@
+.profile_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .profile_background {
-    width: 1260px;
-    height: 300px;
+    border: 1px solid #999;
+    width: 790px;
+    height: 200px;
     margin: 0 auto;
     padding: 20px;
-    background: url('https://picsum.photos/1260/300') no-repeat;
+    background: url('https://picsum.photos/800/300') no-repeat;
     background-size: cover;
 }
 .profile {
-    width: 1215px;
-    margin: 0 auto;
+    width: 830px;
     max-height: auto;
-    padding: 20px 40px;
-    border: 2px solid #999;
+    border: 1px solid #999;
+    border-top: 2px solid #fff;
+    background-color: #fff;
     position: relative;
 }
 
 .avatar {
+    background-color: #999;
     border-radius: 50%;
     border: 5px solid #fff;
     width: 150px;
@@ -24,7 +32,168 @@
     top: -75px;
     left: 75px;
 }
+.profile-name_wrapper {
+    min-width: 200px;
+    width: auto;
+    margin-top: 8.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
 
 .profile_name {
-    margin-top: 85px;
+    margin: 5px 0;
+    font-size: 2.5rem;
+    color: #555;
+}
+
+.profile-name-content {
+    color: #aaa;
+    font-size: 1.5rem;
+}
+.log-out-btn {
+    width: 100px;
+    display: block;
+    position: absolute;
+    right: 2rem;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 2px solid #008dce;
+    padding: 15px;
+    font-size: 1.5rem;
+    color: #008dce;
+}
+
+.log-out-btn--active {
+    display: none;
+}
+
+.upload-form-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: #000000, $alpha: .5);
+}
+
+.upload-form {
+    width: 800px;
+    height: 400px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 10px 20px #000;
+}
+
+.img_wrapper {
+    width: 600px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #999;
+    color: #999;
+}
+
+.form-sub-img {
+    height: 100%;
+}
+
+.input_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.file {
+    padding: 10px;
+}
+
+.file::-webkit-file-upload-button {
+    width: 110px;
+    border: 2px solid #008dce;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    &:hover {
+        background-color: #008dce;
+        color: #fff;
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 5px 2px #008dce;
+    }
+}
+
+.form-sub-btn {
+    width: 110px;
+    padding: 1rem;
+    border: 2px solid #008dce;
+    border-radius: 1rem;
+    background-color: #fff;
+    &:hover {
+        background-color: #008dce;
+        color: #fff;
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 5px 2px #008dce;
+    }
+}
+
+.camera {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #008dce;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    svg {
+        width: 40px;
+        height: 40px;
+    }
+    &:hover {
+        #svg {
+            fill: #fff;
+        }
+    }
+}
+
+.deleteBtn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        svg {
+            fill: #fff;
+            stroke: #fff;
+        }
+    }
+}
+
+.edit-btn {
+    top: 60px;
+}
+
+.deleteBtn--active {
+    display: none;
+}
+
+.camera--active {
+    display: none;
 }

@@ -1,0 +1,35 @@
+.item_link-profile {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    .logo-img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+    &:hover {
+        h3 {
+            color: #FFF;
+        }
+    }
+}
+
+.reder-list {
+    width: 200px;
+    border: 1px solid #008dce;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.reder-item {
+    margin: 0;
+}
+
+.profile-btn {
+    background-color: inherit;
+    border: none;
+    color: #008dce;
+    font-size: 1.5rem;
+}

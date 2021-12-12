@@ -1,0 +1,37 @@
+.header {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #999;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+}
+
+.input {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid #008dce;
+    &:focus {
+        outline: none;
+        box-shadow: 0px 0px 2px 2px #008dce;
+        border: 2px solid #fff;
+    }
+}
+
+.modal-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 1rem;
+    font-size: 3rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 2rem;
+    color: #008dce;
+}
