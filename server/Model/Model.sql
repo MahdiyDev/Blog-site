@@ -1,4 +1,4 @@
-create table team_project;
+create database team_project;
 
 create extension if not exists "uuid-ossp";
 

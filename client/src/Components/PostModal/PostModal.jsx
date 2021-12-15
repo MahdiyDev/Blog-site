@@ -1,4 +1,5 @@
 import { useState } from "react";
+import url from "../../assets/url";
 import useAuth from "../../Hooks/useAuth";
 
 function PostModal({ modal, setModal, method }) {
@@ -17,7 +18,7 @@ function PostModal({ modal, setModal, method }) {
         <div className="upload-form-wrapper" onClick={e=> e.target.classList.value === 'upload-form-wrapper' ?
             setModal(false) : ''}
             >
-            <form action="https://blog-site-team.herokuapp.com/posts" method={method} encType="multipart/form-data"
+            <form action={`${url}posts`} method={method} encType="multipart/form-data"
                 className="upload-form">
                 <div className="img_wrapper">
                     <img className="form-sub-img" src={img} alt="" />

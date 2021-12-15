@@ -7,7 +7,7 @@ module.exports = {
     try {
       const { postTitle } = req.body;
       const { mimetype, mv } = req.files.postImage
-      if ( mimetype && mv && req.user ) {
+      if ( mimetype && mv && req.user.user_uid ) {
           const name = UUID() + '.' + mimetype.split('/')[1]
           await model.newPost(postTitle, name, req.user.user_uid)
           mv(rootFile + '/uploads/' + name, (_) => {})

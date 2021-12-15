@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import url from "../assets/url";
 import useAuth from "./useAuth";
 
 function useUser(params) {
@@ -6,7 +7,7 @@ function useUser(params) {
     const [ token ] = useAuth(true)
     useEffect(() => {
         if (params) {
-            fetch(`https://blog-site-team.herokuapp.com/user/${params}`, {
+            fetch(`${url}user/${params}`, {
                 headers: {
                     'authorization': `${token}`
                 }

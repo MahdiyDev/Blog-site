@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import useAuth from '../../Hooks/useAuth';
 import RenderUsers from '../RenderUser/RenderUser';
 import useAuthUser from '../../Hooks/useAuthUser';
+import url from '../../assets/url';
 
 let num = 0
 function Main({ children }) {
@@ -16,7 +17,7 @@ function Main({ children }) {
         fetchUser()
     }
     function fetchUser() {
-        fetch(`https://blog-site-team.herokuapp.com/users?page=${num}&limit=5`, {
+        fetch(`${url}users?page=${num}&limit=5`, {
             headers: {
                 'authorization': `${token}`
             }

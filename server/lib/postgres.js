@@ -1,6 +1,6 @@
 const { Pool } = require("pg");
 const { pg } = require("../config");
-const pool = new Pool({ connectionString: pg.connectionElephantString });
+const pool = new Pool({ connectionString: pg.connectionString });
 
 const fetch = async (SQL, ...values) => {
   const client = await pool.connect();

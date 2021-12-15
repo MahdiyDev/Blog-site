@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import url from "../assets/url";
 import useAuth from "./useAuth";
 
 function useLogin() {
@@ -7,7 +8,7 @@ function useLogin() {
 
     useEffect(() => {
         if (user) {
-            fetch('https://blog-site-team.herokuapp.com/login', {
+            fetch(`${url}login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

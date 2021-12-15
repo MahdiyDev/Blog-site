@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { validate } = require('../../middlewares/jwt')
+const { validate } = require('../../Middlewares/jwt')
 
 const userModule = require('./user')
 

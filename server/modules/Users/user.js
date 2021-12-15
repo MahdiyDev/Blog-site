@@ -22,7 +22,8 @@ module.exports = {
         try {
             const { user_avatar, user_fname, user_lname, user_email, user_password } = req.body
 
-            const foundUser = model.userLogin(user_email, user_password) 
+            const foundUser = model.userLogin(user_email, user_password)
+            console.log(await foundUser);
                         
             if (!(await foundUser).length && user_fname && user_lname && user_email && user_password) {
                 const newUser = model.userRegister( user_avatar, user_fname, user_lname, user_email, user_password )

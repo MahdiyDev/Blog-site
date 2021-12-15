@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import url from "../../assets/url";
 import avatar from '../../Images/avatar.png'
 import './RenderUser.scss'
 
@@ -8,7 +9,7 @@ function RenderUsers({ user, moreUser }) {
         <ul className='main-user-list reder-list'>            
             <h2 className='main-rec-title'>Recommend for you</h2>
             {user.length ? user[0].map(u => {
-            let imgSrc = u.user_avatar ? 'https://blog-site-team.herokuapp.com/avatar/' + u.user_avatar : avatar
+            let imgSrc = u.user_avatar ? `${url}avatar/` + u.user_avatar : avatar
             let styleFile = {
                 backgroundImage: `url(${imgSrc})`,
                 backgroundSize: 'cover',

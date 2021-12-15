@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import url from '../assets/url'
 
 function useEditDelete() {
     const [ option, setOption ] = useState(null)
     useEffect(() => {
         if (option !== null) {
-            fetch(`https://blog-site-team.herokuapp.com/posts`, {
+            console.log(option);
+            fetch(`${url}posts`, {
                 method: option.method,
                 headers: {
                     "Content-Type": "application/json",
